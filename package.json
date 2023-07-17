@@ -2,43 +2,15 @@
   "name": "deforest_app",
   "version": "1.0.0",
   "description": "",
-  "main": "web.js",
+  "main": "web_bk.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node src/app.js",
-    "serve:watch": "nodemon src/app.js",
-    "build": "webpack --mode production",
-    "build:serve": "node dist/web.js",
-    "start": "node web.js"
+    "start": "node web_bk.js"
   },
-  "type": "commonjs",
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^1.4.0",
-    "body-parser": "^1.20.1",
-    "core-js": "^3.31.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "mongoose": "^6.7.4",
-    "open-graph-scraper": "^6.2.1",
-    "vue-router": "^3.5.1",
-    "vue-server-renderer": "^2.7.14",
-    "@babel/runtime-corejs3": "^7.20.7",
-    "path": "^0.12.7"
-  },
-  "devDependencies": {
-    "cross-env": "^7.0.3",
-    "nodemon": "^2.0.22",
-    "webpack": "^4.44.0",
-    "webpack-cli": "^3.1.0",
-    "@babel/cli": "^7.7.4",
-    "@babel/core": "^7.8.6",
-    "@babel/plugin-transform-runtime": "^7.19.6",
-    "@babel/preset-env": "^7.7.4",
-    "babel-loader": "^9.1.3",
-    "webpack-node-externals": "^3.0.0"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
   }
 }
