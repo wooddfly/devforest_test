@@ -12,7 +12,7 @@ const services = require("./server/services");
 
 
 const app = express();
-const port = process.env.PORT || 4000;
+const port = 8001 || 4000;
 const cors = require('cors');
 
 //app.use(express.json());
@@ -26,8 +26,9 @@ app.use(bodyParser.json());
 mongoose.Promise = global.Promise;
 mongoose.set("strictQuery", false);
 
+const URI = "mongodb+srv://devforest443:dev443!!*@projects.eveu7ts.mongodb.net/myProject?retryWrites=true&w=majority";
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect(URI, {
 	useUnifiedTopology: true,
 	useNewUrlParser: true,
 }).then(() => console.log('Successfully connected to mongodb')).catch(e => console.error(e));
