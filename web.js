@@ -21,12 +21,12 @@ app.all('/*', async ({ url}, res, next) => {
 	next();
 });
 
-/*
+
 app.get('/*', (req, res) => {
 	//res.render('index')
-	res.sendFile('index.html');
+	res.sendFile('/brand/manasis/dist/html/main.html');
 });
-*/
+
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`);
 	console.log(`listen to http://localhost:${port}`);
