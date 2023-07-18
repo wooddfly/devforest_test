@@ -21,7 +21,7 @@ app.all('/*', async ({ url}, res, next) => {
 	next();
 });
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
 	//res.render('index')
 	res.sendFile(path.join(__dirname, "index.html"));
 });
