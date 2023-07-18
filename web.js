@@ -10,7 +10,7 @@ const port = process.env.PORT || 4000;
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-//app.use(express.static('./public')); 
+app.use(express.static('./public')); 
 
 app.all('/*', async ({ url}, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
