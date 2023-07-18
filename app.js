@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.all('/*', async ({ url}, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "X-Requested-With");
-	next();
+	//next();
 });
 
 app.get('/test', (req, res) => {
