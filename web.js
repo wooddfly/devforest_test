@@ -21,9 +21,9 @@ app.all('/*', async ({ url}, res, next) => {
 	//next();
 });
 
-app.get('/test', (req, res) => {
-	res.render('index')
-	//res.sendFile('index.html');
+app.get('/', (req, res) => {
+	//res.render('index')
+	res.sendFile('index.html');
 });
 
 app.listen(port, () => {
