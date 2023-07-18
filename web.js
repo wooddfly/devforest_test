@@ -12,7 +12,8 @@ const port = process.env.PORT || 4000;
 //app.set('view engine', 'ejs');
 
 //app.use(express.static('./public'));
-app.use(express.static(path.join(__dirname, "work")));
+app.use(express.static(path.join(__dirname, "public")));
+app.use('/work', express.static(path.join(__dirname, "work")));
 //app.use('/public', express.static( __dirname + '/public'));
 
 app.all('/*', async ({ url}, res, next) => {
@@ -21,12 +22,12 @@ app.all('/*', async ({ url}, res, next) => {
 	next();
 });
 
-
+/*
 app.get('/*', (req, res) => {
 	//res.render('index')
 	res.sendFile('/brand/manasis/dist/html/main.html');
 });
-
+*/
 app.listen(port, () => {
 	console.log(`Server listening on port ${port}`);
 	console.log(`listen to http://localhost:${port}`);
