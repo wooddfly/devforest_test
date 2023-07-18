@@ -8,8 +8,8 @@ const path = require("path");
 const app = express();
 const port = process.env.PORT || 4000;
 
-app.set('views', __dirname + '/views');
-app.set('view engine', 'ejs');
+//app.set('views', __dirname + '/views');
+//app.set('view engine', 'ejs');
 
 //app.use(express.static('./public'));
 app.use(express.static(path.join(__dirname, "public")));
@@ -22,7 +22,8 @@ app.all('/*', async ({ url}, res, next) => {
 });
 
 app.get('/', (req, res) => {
-	res.render('index')
+	//res.render('index')
+	res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.listen(port, () => {
